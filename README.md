@@ -1,57 +1,54 @@
 # Cybersecurity Career Simulation Projects
-This repository contains completed projects from career simulation exercises, demonstrating both hands-on technical skills and professional documentation.
+
+This repository showcases hands‑on security work with executive‑ready documentation.
 
 ---
 
-### 1. Splunk Configuration File Hardening
-**Overview:**
-A security hardening project for Splunk’s `config.conf` file, completed as part of a career simulation. The goal was to address excessive permissions, ensure integrity monitoring, and produce an executive-level report.
-
+## 1) Splunk Configuration File Hardening
+**Overview:** Secured Splunk’s `config.conf` after detecting over‑permissive access and missing integrity checks; produced an executive report.
 **Key Actions:**
-- Located the correct `config.conf` file on the system.
-- Identified insecure global file permissions.
-- Applied least-privilege settings (`chmod 700`, `chown root`).
-- Established a baseline file hash using `md5sum` (*note: in production, use stronger algorithms such as SHA-256*).
-- Made authorized modifications and re-verified with a new hash.
-- Created and stored secure backups in a designated directory.
+- Located the correct config file and audited permissions.
+- Hardened permissions (`chmod 700`, `chown root`).
+- Established a baseline integrity hash with `md5sum` *(note: use SHA‑256 in production)*.
+- Performed a controlled change and re‑verified the hash.
+- Created a secure backup for rapid recovery.
 
-**Skills Demonstrated:**
-- Linux file system navigation and search (`find`, `cd`).
-- Permission and ownership hardening.
-- Integrity monitoring and baseline creation.
-- Backup creation and storage.
-- Executive-level cybersecurity reporting.
-
-**Project File:** [📄 Splunk Config File Hardening Report](Splunk_Config_File_Hardening.pdf)
+**Skills:** Linux hardening, integrity monitoring, backups, executive reporting  
+**Project File:** [📄 Splunk_Config_File_Hardening.pdf](./Splunk_Config_File_Hardening.pdf)
 
 ---
 
-### 2. IT Onboarding Runbook (Windows Active Directory)
-**Overview:**
-A standardized runbook for onboarding new hires into a Windows Server Active Directory environment, ensuring consistent configuration, security, and usability.
-
+## 2) IT Onboarding Runbook (Windows Active Directory)
+**Overview:** Standardized new‑hire workstation setup in a Windows AD domain.
 **Key Actions:**
-- Joined a workstation to an Active Directory domain.
-- Created new user accounts and departmental groups.
-- Configured a departmental shared folder with NTFS and share permissions.
-- Created an Organizational Unit (OU) and linked targeted Group Policy Objects (GPOs).
-- Implemented GPO restrictions (disable CMD, remove Run menu, add startup message).
-- Reviewed security logs and ran PowerShell verification scripts.
+- Domain join, AD user/group creation, departmental share with NTFS + share perms.
+- OU creation; GPOs: startup banner, disable CMD, remove Run, logon drive map.
+- Event Viewer verification and PowerShell checks.
 
-**Skills Demonstrated:**
-- Active Directory user, group, and OU management.
-- Group Policy configuration and enforcement.
-- Windows file sharing and permission setup.
-- PowerShell scripting for system verification.
-- Clear procedural IT documentation.
-
-**Project File:** [📄 IT Onboarding Runbook](IT-Onboarding-Runbook.pdf)
+**Skills:** AD admin, GPO, Windows permissions, PowerShell, procedural documentation  
+**Project File:** [📄 IT-Onboarding-Runbook.pdf](./IT-Onboarding-Runbook.pdf)
 
 ---
 
-### Repository Structure
-```markdown
-📦 UTD-Cybserscuirty-Career-Simulation
- ├── Splunk_Config_File_Hardening.pdf
- ├── IT-Onboarding-Runbook.pdf
- └── README.md
+## 3) Penetration Test – Career Simulation 3
+**Overview:** Executed a full attack chain against a simulated corporate network; documented narrative, findings, and remediation.
+**Top Findings:**
+- High: Command injection on web app (non‑standard port).
+- High: SSH private key exposed on web server.
+- High: Windows host vulnerable to SMB exploit; Pass‑the‑Hash viable.
+- Medium: Weak password with outdated MD5 hashing.
+- Medium: Insufficient segmentation enabled lateral movement.
+
+**Remediation:** Input validation/WAF; remove keys from web root; patch/disable SMBv1; strong passwords + modern hashing (bcrypt/Argon2); MFA; VLAN segmentation + ACLs.  
+**Skills:** Nmap, command injection, SSH pivot, John the Ripper, Metasploit (psexec), PTH, executive reporting  
+**Project File:** [📄 Penetration_Test_Report_Career_Sim_3.pdf](./Penetration_Test_Report_Career_Sim_3.pdf)
+
+---
+
+## Repository Structure
+```text
+📦 cybserscuirty-career-simulation
+├── Splunk_Config_File_Hardening.pdf
+├── IT-Onboarding-Runbook.pdf
+├── Penetration_Test_Report_Career_Sim_3.pdf
+└── README.md
