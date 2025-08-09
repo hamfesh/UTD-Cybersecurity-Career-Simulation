@@ -19,7 +19,7 @@ This repository showcases hands‑on security work with executive‑ready docume
 ---
 
 ## 2) IT Onboarding Runbook (Windows Active Directory)
-**Overview:** Standardized new‑hire workstation setup in a Windows AD domain.
+**Overview:** Standardized new‑hire workstation setup in a Windows AD domain.<br>
 **Key Actions:**
 - Domain join, AD user/group creation, departmental share with NTFS + share perms.
 - OU creation; GPOs: startup banner, disable CMD, remove Run, logon drive map.
@@ -31,7 +31,7 @@ This repository showcases hands‑on security work with executive‑ready docume
 ---
 
 ## 3) Penetration Test – Career Simulation 3
-**Overview:** Executed a full attack chain against a simulated corporate network; documented narrative, findings, and remediation.
+**Overview:** Executed a full attack chain against a simulated corporate network; documented narrative, findings, and remediation.<br>
 **Top Findings:**
 - High: Command injection on web app (non‑standard port).
 - High: SSH private key exposed on web server.
